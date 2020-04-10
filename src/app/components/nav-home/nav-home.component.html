@@ -1,4 +1,4 @@
-<div class="container-fluid container-home">
+<div class="container-fluid container-home md-up">
     <!--for md-->
     <div class="container md-up">
         <div class="row">
@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <!--for sm -->
+    <!--for sm 
     <div class="md-down">
         <div class="row justify-content-center img-logo">
             <div>
@@ -65,7 +65,36 @@
             </div>
         </div>
     </div>
+    -->
 </div>
+
+<div class="container-fluid md-down">
+    <div class="md-down">
+        <div class="row justify-content-center img-logo">
+        </div>
+        <div class="row justify-content-center row-nav">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ueber-uns">Über Uns</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/kontakt">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+        <app-gallery></app-gallery>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
 <div class="footer">
     <div class="col-8">
         <div class="row justify-content-start">Copyright © Comerd-Tech GmbH - All rights reserved. </div>
