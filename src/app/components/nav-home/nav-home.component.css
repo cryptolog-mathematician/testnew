@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+.container-home {
+    /*z-index: -1;*/
+    background: url('~/assets/images/Lift.png');
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+}
+
+.container-lift {
+    width: 87%;
+    height: 38vw;
+    overflow: hidden;
+    margin-top: 1.8vw;
+    margin-right: 2px;
+    /*
+    width: 89%;
+    height: 36vw;
+    overflow: hidden;
+    margin-top: 10vw;
+    margin-right: 2px;
+    */
+}
+
+#coloumn1 {
+    position: relative;
+    -webkit-animation-name: coloumn1;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    /* Safari 4.0 - 8.0 */
+    animation-name: coloumn1;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+#coloumn4 {
+    position: relative;
+    -webkit-animation-name: coloumn4;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    /* Safari 4.0 - 8.0 */
+    animation-name: coloumn4;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    margin-top: 0px;
+    z-index: 10;
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes coloumn1 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes coloumn4 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(100%)
+    }
+}
+
+@keyframes coloumn1 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes coloumn4 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(100%)
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        height: 300px;
+        overflow: hidden;
+    }
+}
+
+.g {
+    background-image: url("~/assets/images/aufzug2.PNG");
+    height: 100%;
+    color: white;
+    font: 18px Arial;
+    float: left;
+}
+
+.grid-50 {
+    display: flex;
+    flex-wrap: nowrap;
+    width: calc(50% - 0px);
+    height: 100%;
+    overflow: hidden;
+}
+
+.footer {
+    margin-top: 2px;
+    background-color: rgba(0, 0, 0, .85);
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+a {
+    color: white;
+}
+
+button {
+    margin-top: 20%;
+    outline: none;
+    width: 80px;
+}

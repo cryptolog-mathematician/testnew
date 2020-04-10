@@ -1,0 +1,13 @@
+.container-md {
+    width: 82%;
+    margin: auto;
+    margin-top: 7%;
+    text-align: center;
+    padding-left: 5.4%;
+    outline: none;
+}
+
+img {
+    height: 28.4vw;
+    width: auto;
+}
