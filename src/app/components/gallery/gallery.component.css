@@ -14,3 +14,18 @@ img {
     height: 28.6vw;
     width: auto;
 }
+
+@media only screen and (max-width: 768px) {
+    .container-fluid {
+        width: 100%;
+        margin-top: 2%;
+    }
+    .container-md {
+        width: 100%;
+        margin-top: 0;
+    }
+    img {
+        height: 48vw;
+        width: 100%;
+    }
+}

@@ -11,19 +11,17 @@
     background-size: cover;
 }
 
+.img-logo {
+    width: 70%;
+    margin: auto;
+}
+
 .container-lift {
-    width: 87%;
+    width: 89%;
     height: 38vw;
     overflow: hidden;
-    margin-top: 1.8vw;
+    margin-top: 1.7vw;
     margin-right: 2px;
-    /*
-    width: 89%;
-    height: 36vw;
-    overflow: hidden;
-    margin-top: 10vw;
-    margin-right: 2px;
-    */
 }
 
 #coloumn1 {
@@ -131,14 +129,54 @@
     display: flex;
     align-items: center;
     padding: 0 10px;
+    font-size: small;
 }
 
 a {
     color: white;
+    margin-left: 3px;
 }
 
 button {
     margin-top: 20%;
     outline: none;
     width: 80px;
+}
+
+.md-down {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .md-up {
+        display: none;
+    }
+    .md-down {
+        display: inherit;
+    }
+    .container-home {
+        height: 548px;
+    }
+    .container-lift {
+        width: 100%;
+        height: 100%;
+    }
+    .footer {
+        font-size: smaller;
+    }
+    .img-logo {
+        background: url("~/assets/images/comerdtechlogo2.png");
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        width: 100%;
+        height: 60px;
+    }
+    .nav-link {
+        font-size: x-small;
+    }
+    .nav-link:hover {
+        background-color: rgba(256, 256, 256, .35);
+        color: black;
+    }
 }
