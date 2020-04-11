@@ -8,6 +8,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class NavHomeComponent implements OnInit {
 
+  public isMenuCollapsed = true;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute

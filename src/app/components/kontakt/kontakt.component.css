@@ -1,7 +1,7 @@
 .container-fluid {
     width: 88.6%;
     margin: auto;
-    margin-top: 6%;
+    margin-top: 7.5%;
     text-align: center;
     padding-left: 5.4%;
 }
@@ -13,6 +13,7 @@ form {
     background-color: rgba(0, 0, 0, .25);
     color: white;
     padding: 20px;
+    font-size: small;
 }
 
 mat-form-field {
@@ -46,10 +47,17 @@ mat-form-field {
 
 @media only screen and (max-width: 768px) {
     .container-fluid {
-        width: 90%;
-        margin-top: 2%;
+        width: 88%;
+        margin-top: 7%;
+        padding-right: 1%;
     }
     input {
         font-size: small;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    form {
+        padding: 1px 20px;
     }
 }
