@@ -1,96 +1,51 @@
-<div class="container-fluid container-home md-up">
+<div class="container-fluid container-home">
     <!--for md-->
-    <div class="container md-up">
+    <div>
         <div class="row">
             <img class="img-fluid img-logo" src="../assets/images/comerdtechlogo.png" alt="Responsive image">
         </div>
     </div>
-    <div class="row md-up">
-        <div class="col-md-2 align-self-center">
-            <div class="row justify-content-end">
-                <button mat-raised-button routerLink="/home">Home </button>
-            </div>
-            <div class="row justify-content-end">
-                <button mat-raised-button routerLink="/gallery" routerLinkActive="active">Gallery</button>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="row justify-content-center">
-                <div class="container-lift">
-                    <router-outlet></router-outlet>
-                    <div id="coloumn1" class="g grid-50"></div>
-                    <div id="coloumn4" class="g grid-50"></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2 align-self-center">
-            <div class="row justify-content-start">
-                <button mat-raised-button routerLink="/ueber-uns">Über Uns</button>
-            </div>
-            <div class="row justify-content-start">
-                <button mat-raised-button routerLink="/kontakt">Kontakt</button>
-            </div>
-        </div>
-    </div>
-
-    <!--for sm 
-    <div class="md-down">
-        <div class="row justify-content-center img-logo">
-            <div>
-                <div class="row justify-content-center">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/home">Home </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/gallery">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/ueber-uns">Über Uns</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/kontakt">Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="container-lift">
-                    <router-outlet></router-outlet>
-                    <div id="coloumn1" class="g grid-50"></div>
-                    <div id="coloumn4" class="g grid-50"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-</div>
-
-<div class="container-fluid md-down">
-    <div class="md-down">
-        <div class="row justify-content-center img-logo">
-        </div>
-        <div class="row justify-content-center row-nav">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/home">Home </a>
+    <div class="row justify-content-center">
+        <div class="col-4 align-self-center md-down">
+            <ul class="navbar-nav">
+                <li class="navige-item">
+                    <button mat-raised-button routerLink="/home"><div class="button-span">Home</div></button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/gallery">Gallery</a>
+                    <button mat-raised-button routerLink="/gallery"><div class="button-span">Gallery</div></button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/ueber-uns">Über Uns</a>
+                    <button mat-raised-button routerLink="/ueber-uns"><div class="button-span">Über Uns</div></button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/kontakt">Kontakt</a>
+                    <button mat-raised-button routerLink="/kontakt"><div class="button-span">Kontakt</div></button>
                 </li>
             </ul>
         </div>
-        <app-gallery></app-gallery>
-        <div>
-            <router-outlet></router-outlet>
+        <div class="col-2 align-self-center  md-up">
+            <div class="row justify-content-end">
+                <button mat-raised-button routerLink="/home"><div class="button-span">Home</div></button>
+            </div>
+            <div class="row justify-content-end">
+                <button mat-raised-button routerLink="/gallery"><div class="button-span">Gallery</div></button>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="row justify-content-center">
+                <div class="container-lift">
+                    <router-outlet></router-outlet>
+                    <div id="coloumn1" class="g grid-50"></div>
+                    <div id="coloumn4" class="g grid-50"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 align-self-center md-up">
+            <div class="row justify-content-start">
+                <button mat-raised-button routerLink="/ueber-uns"><div class="button-span">Über Uns</div></button>
+            </div>
+            <div class="row justify-content-start">
+                <button mat-raised-button routerLink="/kontakt"><div class="button-span">Kontakt</div></button>
+            </div>
         </div>
     </div>
 </div>

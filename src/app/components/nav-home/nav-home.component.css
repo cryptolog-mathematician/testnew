@@ -12,13 +12,13 @@
 }
 
 .img-logo {
-    width: 70%;
+    width: 64%;
     margin: auto;
 }
 
 .container-lift {
     width: 89%;
-    height: 38vw;
+    min-height: 38vw;
     overflow: hidden;
     margin-top: 1.7vw;
     margin-right: 2px;
@@ -141,6 +141,19 @@ button {
     margin-top: 20%;
     outline: none;
     width: 80px;
+    text-align: center;
+    background-image: url("~/assets/images/knopf.PNG");
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: contain;
+    background-position-x: center;
+    padding: 0;
+}
+
+.button-span {
+    background-color: rgba(0, 0, 0, .35);
+    color: white;
+    height: 100%;
 }
 
 .md-down {
@@ -148,61 +161,36 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
+    .container-home {
+        background-size: contain;
+        height: 60vw;
+    }
+    button {
+        height: 35px;
+        font-size: x-small;
+    }
+    .footer {
+        font-size: smaller;
+    }
+}
+
+@media only screen and (max-width: 568px) {
     .md-up {
         display: none;
     }
     .md-down {
         display: inherit;
     }
-    /*
     .container-home {
-        height: 548px;
-    }
-    .container-lift {
-        width: 100%;
-        height: 100%;
+        background-size: contain;
+        height: 60vw;
     }
     .footer {
-        font-size: smaller;
+        font-size: xx-small;
     }
-    .img-logo {
-        background: url("~/assets/images/comerdtechlogo2.png");
-        background-repeat: no-repeat;
-        /* Do not repeat the image 
-        background-size: cover;
-        width: 100%;
-        height: 60px;
-    }
-    .nav-link {
-        font-size: x-small;
-    }
-    .nav-link:hover {
-        background-color: rgba(256, 256, 256, .35);
-        color: black;
-    }
-    */
-    .container-home {
-        height: auto;
-    }
-    .footer {
-        font-size: smaller;
-    }
-    .img-logo {
-        background: url("~/assets/images/comerdtechlogo.png");
-        background-repeat: no-repeat;
-        /* Do not repeat the image */
-        background-size: cover;
-        height: 9vw;
-    }
-    .row-nav {
-        background-color: rgba(0, 0, 0, .75);
-        border: 2px solid rgba(0, 0, 0, .75);
-    }
-    .nav-link {
-        font-size: x-small;
-    }
-    .nav-link:hover {
-        background-color: rgba(256, 256, 256, 1);
-        color: black;
+    button {
+        width: 40px;
+        margin-left: -7px;
+        margin-top: 5%;
     }
 }
