@@ -1,23 +1,24 @@
 .container-fluid {
-    width: 88.6%;
-    margin: auto;
-    margin-top: 7.5%;
+    width: 98%;
+    background-color: rgba(0, 0, 0, .25);
+    color: white;
+    margin: 0;
+    padding: 0 4px;
     text-align: center;
-    padding-left: 5.4%;
+    height: auto;
+    padding-top: 5px;
+    margin-left: 6.5px;
 }
 
 form {
-    width: 90%;
-    height: auto;
+    width: 97%;
     margin: auto;
-    background-color: rgba(0, 0, 0, .25);
-    color: white;
-    padding: 20px;
     font-size: small;
+    padding: 0 4px 3px 4px;
 }
 
 mat-form-field {
-    width: 90%;
+    width: 70%;
 }
 
 ::ng-deep .mat-focused .mat-form-field-label {
@@ -45,6 +46,8 @@ mat-form-field {
     color: white;
 }
 
+
+/*
 @media only screen and (max-width: 768px) {
     .container-fluid {
         width: 88%;
@@ -61,3 +64,4 @@ mat-form-field {
         padding: 1px 20px;
     }
 }
+*/

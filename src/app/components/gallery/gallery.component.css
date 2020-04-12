@@ -1,22 +1,24 @@
 .container-fluid {
-    width: 94%;
-    margin: auto;
-    margin-top: 7.2%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    padding-left: 5.4%;
 }
 
 .container-md {
-    width: 90%;
+    width: 100%;
     height: auto;
-    margin: auto;
+    margin: 0;
+    padding: 0 3.9px;
 }
 
 img {
-    height: 28.3vw;
+    height: 28.5vw;
     width: auto;
 }
 
+
+/*
 @media only screen and (max-width: 768px) {
     .container-fluid {
         width: 97%;
@@ -27,4 +29,4 @@ img {
         height: 28.6vw;
         width: 100%;
     }
-}
+}*/

@@ -2,17 +2,13 @@
     box-sizing: border-box;
 }
 
-.container-fluid {
-    height: auto;
-}
-
 .container-home {
     /*z-index: -1;*/
     background: url('~/assets/images/Lift.png');
     /* Center the image */
     background-repeat: no-repeat;
     /* Do not repeat the image */
-    background-size: cover;
+    background-size: contain;
 }
 
 .img-logo {
@@ -20,12 +16,17 @@
     margin: auto;
 }
 
+.router-outlt {
+    width: 100%;
+    margin-left: 10px;
+    margin-top: -13px;
+}
+
 .container-lift {
-    width: 89%;
-    min-height: 38vw;
+    width: 72%;
+    height: 39vw;
     overflow: hidden;
-    margin-top: 1.7vw;
-    margin-right: 2px;
+    margin-left: 22px;
 }
 
 #coloumn1 {
@@ -125,17 +126,6 @@
     overflow: hidden;
 }
 
-.footer {
-    margin-top: 2px;
-    background-color: rgba(0, 0, 0, .85);
-    color: white;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-    font-size: small;
-}
-
 a {
     color: white;
     margin-left: 3px;
@@ -164,6 +154,8 @@ a {
     display: none;
 }
 
+
+/*
 @media only screen and (max-width: 768px) {
     .container-home {
         background-size: contain;
@@ -172,9 +164,6 @@ a {
     .button-full-screen {
         height: 35px;
         font-size: x-small;
-    }
-    .footer {
-        font-size: smaller;
     }
 }
 
@@ -189,9 +178,6 @@ a {
         background-size: contain;
         height: 80vw;
     }
-    .footer {
-        font-size: xx-small;
-    }
     .button-full-screen {
         width: 40px;
         margin-left: -7px;
@@ -201,4 +187,4 @@ a {
         margin-top: -37px;
         margin-right: 4px;
     }
-}
+}*/
