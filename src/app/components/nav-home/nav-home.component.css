@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
 }
 
 .container-home {
@@ -9,6 +12,8 @@
     background-repeat: no-repeat;
     /* Do not repeat the image */
     background-size: contain;
+    width: 100%;
+    height: auto;
 }
 
 .img-logo {
@@ -16,119 +21,33 @@
     margin: auto;
 }
 
-.router-outlt {
-    width: 100%;
-    margin-left: 10px;
-    margin-top: -13px;
+nav {
+    padding: 0 10px;
+}
+
+.nav-bg-custom {
+    background-color: rgba(0, 0, 0, .5);
+    padding: 10px;
+}
+
+.nav-bg-custom ul li a {
+    height: 30px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 3px;
+    padding-left: 5px;
+}
+
+.nav-bg-custom ul li a:hover {
+    background-color: rgba(256, 256, 256, .8);
+    color: black;
 }
 
 .container-lift {
-    width: 72%;
-    height: 39vw;
+    width: 100%;
     overflow: hidden;
-    margin-left: 22px;
-}
-
-#coloumn1 {
-    position: relative;
-    -webkit-animation-name: coloumn1;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 3s;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-fill-mode: forwards;
-    /* Safari 4.0 - 8.0 */
-    animation-name: coloumn1;
-    animation-duration: 3s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    margin-top: 0px;
-    z-index: 1;
-}
-
-#coloumn4 {
-    position: relative;
-    -webkit-animation-name: coloumn4;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 3s;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-fill-mode: forwards;
-    /* Safari 4.0 - 8.0 */
-    animation-name: coloumn4;
-    animation-duration: 3s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    margin-top: 0px;
-    z-index: 10;
-}
-
-
-/* Safari 4.0 - 8.0 */
-
-@-webkit-keyframes coloumn1 {
-    from {
-        transform: translateX(0px)
-    }
-    to {
-        transform: translateX(-100%)
-    }
-}
-
-
-/* Safari 4.0 - 8.0 */
-
-@-webkit-keyframes coloumn4 {
-    from {
-        transform: translateX(0px)
-    }
-    to {
-        transform: translateX(100%)
-    }
-}
-
-@keyframes coloumn1 {
-    from {
-        transform: translateX(0px)
-    }
-    to {
-        transform: translateX(-100%)
-    }
-}
-
-@keyframes coloumn4 {
-    from {
-        transform: translateX(0px)
-    }
-    to {
-        transform: translateX(100%)
-    }
-}
-
-@media (max-width: 600px) {
-    .container {
-        height: 300px;
-        overflow: hidden;
-    }
-}
-
-.g {
-    background-image: url("~/assets/images/aufzug2.PNG");
-    height: 100%;
-    color: white;
-    font: 18px Arial;
-    float: left;
-}
-
-.grid-50 {
-    display: flex;
-    flex-wrap: nowrap;
-    width: calc(50% - 0px);
-    height: 100%;
-    overflow: hidden;
-}
-
-a {
-    color: white;
-    margin-left: 3px;
+    margin-top: 13%;
+    margin-left: 10px;
 }
 
 .button-full-screen {
@@ -150,20 +69,28 @@ a {
     height: 100%;
 }
 
+footer {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.kontakt-info {
+    background-image: url("~/assets/images/comerdtechlogo5.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 40%;
+}
+
 .md-down {
     display: none;
 }
 
-
-/*
 @media only screen and (max-width: 768px) {
+    .md-up {
+        display: inherit;
+    }
     .container-home {
         background-size: contain;
-        height: 60vw;
-    }
-    .button-full-screen {
-        height: 35px;
-        font-size: x-small;
     }
 }
 
@@ -176,15 +103,8 @@ a {
     }
     .container-home {
         background-size: contain;
-        height: 80vw;
     }
-    .button-full-screen {
-        width: 40px;
-        margin-left: -7px;
-        margin-top: 5%;
+    .footer-fs {
+        font-size: xx-small;
     }
-    .container-lift {
-        margin-top: -37px;
-        margin-right: 4px;
-    }
-}*/
+}

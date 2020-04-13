@@ -58,10 +58,10 @@ mat-form-field {
         font-size: small;
     }
 }
+*/
 
 @media only screen and (max-width: 568px) {
-    form {
-        padding: 1px 20px;
+    .container-fluid {
+        margin-left: -5px;
     }
 }
-*/

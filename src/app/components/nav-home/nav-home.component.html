@@ -1,62 +1,92 @@
-<div>
-    <mat-grid-list class="container-home" cols="1" rowHeight="fit" style="height: 760px;">
-        <mat-grid-tile>
-            <mat-grid-tile-header style="height: auto; background-color: transparent;">
-                <img class="img-fluid img-logo" src="../assets/images/comerdtechlogo.png" alt="Responsive image" style="margin: auto;">
-            </mat-grid-tile-header>
-
-            <div style="width: 100%;">
-                <mat-grid-list cols="12" rowHeight="600px">
-                    <mat-grid-tile colspan="2">
-                        <div class="md-up" style="width: 100%;">
-                            <div style="width: 100%; text-align: end;">
-                                <button class="button-full-screen" mat-raised-button routerLink="/home"><div class="button-span">Home</div></button>
-                            </div>
-                            <div style="width: 100%; text-align: end;">
-                                <button class="button-full-screen" mat-raised-button routerLink="/gallery"><div class="button-span">Gallery</div></button>
-                            </div>
-                        </div>
-                    </mat-grid-tile>
-
-                    <mat-grid-tile colspan="8" style="width: 100%;">
-                        <mat-grid-list cols="12" rowHeight="100%" style="width: 100%;">
-                            <mat-grid-tile colspan="2"></mat-grid-tile>
-                            <mat-grid-tile colspan="8" class="router-outlt">
-                                <div style="width: 100%;">
-                                    <router-outlet></router-outlet>
-                                </div>
-                            </mat-grid-tile>
-                            <mat-grid-tile colspan="2"></mat-grid-tile>
-                        </mat-grid-list>
-                        <!--
-                        <div id="coloumn1" class="g grid-50"></div>
-                        <div id="coloumn4" class="g grid-50"></div>
-                        -->
-                    </mat-grid-tile>
-
-                    <mat-grid-tile colspan="2">
-                        <div class="md-up" style="width: 100%;">
-                            <div style="width: 100%;">
-                                <button class="button-full-screen" mat-raised-button routerLink="/ueber-uns"><div class="button-span">Über Uns</div></button>
-                            </div>
-                            <div style="width: 100%;">
-                                <button class="button-full-screen" mat-raised-button routerLink="/kontakt"><div class="button-span">Kontakt</div></button>
-                            </div>
-                        </div>
-                    </mat-grid-tile>
-                </mat-grid-list>
+<div class="container-fluid">
+    <div class="container-home">
+        <header>
+            <div class="row">
+                <img class="img-fluid img-logo" src="../assets/images/comerdtechlogo.png" alt="Responsive image">
             </div>
+            <nav class="md-down">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+                        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+                          &#9776;
+                        </button>
 
-            <mat-grid-tile-footer class="footer">
-                <div class="col-8">
-                    <div class="row justify-content-start">Copyright © Comerd-Tech GmbH - All rights reserved. </div>
+                        <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+                        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse nav-bg-custom">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <!-- Step 4: Close the menu when a link is clicked. -->
+                                    <a class="nav-link" routerLink="/home" (click)="isMenuCollapsed = true">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLink="/gallery" (click)="isMenuCollapsed = true">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLink="/ueber-uns" (click)="isMenuCollapsed = true">Über Uns</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLink="/kontakt" (click)="isMenuCollapsed = true">Kontakt</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-                <div class="col-4">
+            </nav>
+        </header>
+
+        <main>
+            <div class="row">
+                <div class="col-2 align-self-center  md-up">
                     <div class="row justify-content-end">
-                        Made by <a href="https://www.baycom.ch">baycom</a>
+                        <button class="button-full-screen" mat-raised-button routerLink="/home"><div class="button-span">Home</div></button>
+                    </div>
+                    <div class="row justify-content-end">
+                        <button class="button-full-screen" mat-raised-button routerLink="/gallery"><div class="button-span">Gallery</div></button>
                     </div>
                 </div>
-            </mat-grid-tile-footer>
-        </mat-grid-tile>
-    </mat-grid-list>
+                <div class="col-8">
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-8">
+                            <div class="container-lift">
+                                <router-outlet></router-outlet>
+                                <div id="coloumn1" class="g grid-50"></div>
+                                <div id="coloumn4" class="g grid-50"></div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 align-self-center md-up">
+                    <div class="row justify-content-start">
+                        <button class="button-full-screen" mat-raised-button routerLink="/ueber-uns"><div class="button-span">Über Uns</div></button>
+                    </div>
+                    <div class="row justify-content-start">
+                        <button class="button-full-screen" mat-raised-button routerLink="/kontakt"><div class="button-span">Kontakt</div></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div style="width: 100%; height: 194px;"></div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="kontakt-info col-8"></div>
+            <div class="col-4">
+                <div class="row pt-2 footer-fs">
+                    <div class="col-12">
+                        <div class="row justify-content-end">Copyright © Comerd-Tech GmbH - All rights reserved. </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row justify-content-end">
+                            Made by <a href="https://www.baycom.ch">baycom</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
