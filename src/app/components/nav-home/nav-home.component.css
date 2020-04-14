@@ -35,11 +35,11 @@ nav {
     color: white;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 3px;
-    padding-left: 5px;
+    padding: 5px 0 0 5px;
 }
 
 .nav-bg-custom ul li a:hover {
-    background-color: rgba(256, 256, 256, .8);
+    background-color: white;
     color: black;
 }
 

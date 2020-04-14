@@ -1,3 +1,7 @@
+* {
+    outline: none;
+}
+
 .container-fluid {
     width: 100%;
     margin: 0;
@@ -15,4 +19,11 @@
 img {
     height: 28.5vw;
     width: auto;
+}
+
+@media only screen and (max-width: 568px) {
+    .container-fluid {
+        margin-left: -13px;
+        margin-top: 6px;
+    }
 }
