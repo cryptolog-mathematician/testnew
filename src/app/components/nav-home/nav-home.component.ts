@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-nav-home',
@@ -7,13 +8,12 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./nav-home.component.css']
 })
 export class NavHomeComponent implements OnInit {
-
   public isMenuCollapsed = true;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit(): void {
   }

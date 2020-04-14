@@ -47,7 +47,7 @@ nav {
     width: 100%;
     overflow: hidden;
     margin-top: 13%;
-    margin-left: 10px;
+    margin-left: 1.8%;
 }
 
 .button-full-screen {
@@ -86,11 +86,12 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    .md-up {
-        display: inherit;
+    .margintop-768 {
+        margin-top: -100px;
     }
-    .container-home {
-        background-size: contain;
+    .container-lift {
+        margin-left: .87%;
+        margin-top: 13.2%;
     }
 }
 
@@ -107,4 +108,114 @@ footer {
     .footer-fs {
         font-size: xx-small;
     }
+    .container-lift {
+        margin-top: 0;
+        width: 60%;
+        margin: auto;
+        padding-left: 14px;
+    }
+}
+
+
+/*Animation*/
+
+#coloumn1 {
+    position: relative;
+    -webkit-animation-name: coloumn1;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    /* Safari 4.0 - 8.0 */
+    animation-name: coloumn1;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+#coloumn4 {
+    position: relative;
+    -webkit-animation-name: coloumn4;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    /* Safari 4.0 - 8.0 */
+    animation-name: coloumn4;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    margin-top: 0px;
+    z-index: 10;
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes coloumn1 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes coloumn4 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(100%)
+    }
+}
+
+@keyframes coloumn1 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes coloumn4 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(100%)
+    }
+}
+
+
+/*
+
+@media (max-width: 600px) {
+    .container {
+        height: 300px;
+        overflow: hidden;
+    }
+}
+*/
+
+.g {
+    background-image: url("~/assets/images/aufzug2.PNG");
+    height: 100%;
+    color: white;
+    font: 18px Arial;
+    float: left;
+}
+
+.grid-50 {
+    display: flex;
+    flex-wrap: nowrap;
+    width: calc(50% - 0px);
+    height: 100%;
+    overflow: hidden;
 }

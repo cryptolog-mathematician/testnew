@@ -16,13 +16,15 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { KontaktComponent } from './components/kontakt/kontakt.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavHomeComponent,
     GalleryComponent,
-    KontaktComponent
+    KontaktComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
