@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .container-fluid {
     width: 98%;
     color: white;
@@ -5,9 +9,23 @@
     min-height: 28.7vw;
     background-color: rgba(0, 0, 0, .5);
     margin-left: 6.5px;
+    position: relative;
 }
 
-@media only screen and (max-width: 568px) {
+.helper-container-for-lift {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.lift {
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+@media only screen and (max-width: 576px) {
     .container-fluid {
         margin-left: -5px;
         margin-top: 7px;

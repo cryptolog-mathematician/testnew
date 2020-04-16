@@ -12,7 +12,7 @@
 .container-md {
     width: 100%;
     height: auto;
-    margin: 0;
+    margin: 1.5px 0 0 0;
     padding: 0 3.9px;
 }
 
@@ -21,7 +21,7 @@ img {
     width: auto;
 }
 
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 576px) {
     .container-fluid {
         margin-left: -13px;
         margin-top: 6px;
