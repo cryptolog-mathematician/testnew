@@ -23,9 +23,33 @@
             <input matInput placeholder="Enter your email (pat@example.com)" formControlName="email" required>
             <mat-error *ngIf="contactForm.get('email').invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
-        <br>
+        <br> <br>
+
+        <div formGroupName="address">
+            <h3>Address</h3>
+
+            <mat-form-field appearance="legacy">
+                <input matInput placeholder="Street" formControlName="street">
+                <!--
+                <mat-error *ngIf="contactForm.get('address').get('street').invalid">Min lenght is 3</mat-error>
+                -->
+            </mat-form-field>
+            <br>
+          
+            <mat-form-field appearance="legacy">
+                <input matInput placeholder="City" formControlName="city">
+            </mat-form-field>
+            <br>
+          
+            <mat-form-field appearance="legacy">
+                <input matInput placeholder="Zip Code" formControlName="postalCode">
+            </mat-form-field>
+            <br>
+        </div>
+
+
         <mat-form-field appearance="legacy">
-            <textarea matInput placeholder="Message" formControlName="messageText"></textarea>
+            <textarea matInput placeholder="Message" formControlName="messageText" rows="6"></textarea>
         </mat-form-field>
         <br>
         <button mat-raised-button type="submit">Submit</button>

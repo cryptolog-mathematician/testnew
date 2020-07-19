@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +18,8 @@ import { KontaktComponent } from './components/kontakt/kontakt.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
 
 @NgModule({
   declarations: [
@@ -30,13 +33,15 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatCardModule,
     MatButtonModule,
     MatInputModule,
     MatGridListModule,
-    NgbModule
+    NgbModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

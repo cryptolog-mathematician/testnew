@@ -1,6 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { delay } from 'rxjs/operators';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-nav-home',
@@ -10,19 +9,20 @@ import { delay } from 'rxjs/operators';
 export class NavHomeComponent implements OnInit {
   public isMenuCollapsed = true;
 
+  inaktifLift = false;
+  pathIsKontakt = false;
+
   constructor(
-    private router: Router,
-    private route: ActivatedRoute
+    private location: Location
   ) { }
 
   ngOnInit(): void {
-  }
+    if ( this.location.path() === '/kontakt') {
+      this.pathIsKontakt = true;
+    } else {
+      this.pathIsKontakt = false;
+    }
 
-  showGallery() {
-    this.router.navigate(['gallery'], {relativeTo: this.route});
-  }
-
-  showKontakt() {
-    this.router.navigate(['kontakt'], {relativeTo: this.route});
+    setTimeout(() => this.inaktifLift = true, 3800);
   }
 }

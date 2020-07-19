@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators, FormGroup} from '@angular/forms';
+import { MailSenderService } from 'src/app/services/mail-sender.service';
 
 @Component({
   selector: 'app-kontakt',
@@ -10,7 +11,10 @@ export class KontaktComponent implements OnInit {
 
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private mailSender: MailSenderService
+    ) { }
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
@@ -20,8 +24,9 @@ export class KontaktComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       messageText: [''],
       address: this.fb.group({
-        street: [],
-        postalCode: []
+        street: ['', [Validators.required, Validators.minLength(3)]],
+        city: ['', [Validators.required, Validators.minLength(3)]],
+        postalCode: ['', [Validators.required, Validators.minLength(3)]]
       })
     });
   }
@@ -35,7 +40,12 @@ export class KontaktComponent implements OnInit {
   }
 
   onSubmit() {
-    // to Do
+    const mailinfo = this.contactForm.value;
+    console.log(mailinfo);
+    this.mailSender.sendMail(mailinfo)
+                    .subscribe(data =>
+                      console.log(data)
+                    );
   }
 
 }

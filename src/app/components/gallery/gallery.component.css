@@ -4,26 +4,6 @@
 
 .container-fluid {
     width: 100%;
-    margin: 0;
-    padding: 0;
+    height: 100%;
     text-align: center;
-}
-
-.container-md {
-    width: 100%;
-    height: auto;
-    margin: 1.5px 0 0 0;
-    padding: 0 3.9px;
-}
-
-img {
-    height: 28.5vw;
-    width: auto;
-}
-
-@media only screen and (max-width: 576px) {
-    .container-fluid {
-        margin-left: -13px;
-        margin-top: 6px;
-    }
 }
