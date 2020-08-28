@@ -10,6 +10,8 @@ export class GalleryComponent implements OnInit {
 
   images = ['../assets/images/1.jpeg', '../assets/images/2.jpeg', '../assets/images/3.jpeg'];
 
+  OpenImg = '';
+
   paused = false;
   unpauseOnArrow = false;
   pauseOnIndicator = false;
@@ -41,4 +43,8 @@ export class GalleryComponent implements OnInit {
     }
   }
 
+  OpenImage(imag) {
+    this.OpenImg = imag;
+    console.log('OpenImage', this.OpenImg);
+  }
 }
