@@ -7,12 +7,16 @@
 </head>
 
 <body>
-    <nav class="d-sm-none navbar navbar-dark navbar-extend-sm bg-dark">
+    <nav class="d-sm-none navbar navbar-dark navbar-extend-sm navbar-bg">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand mr-auto ml-2" href="/home">CT</a>
+            <div class="navbar-brand mr-auto">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="/home">
+                    <img src="../assets/images/comerdtechlogo.png" alt="comerdtechlogo">
+                </a>
+            </div>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto ml-2">
                     <li class="nav-item active"><a class="nav-link" href="/home">Home</a></li>
@@ -24,24 +28,30 @@
         </div>
     </nav>
 
-    
+
     <div class="bg-contianer">
         <header>
-            <img src="../assets/images/comerdtechlogo.png" alt="xxx">
+            <img class="d-none d-sm-block" src="../assets/images/comerdtechlogo.png" alt="xxx">
         </header>
 
         <main>
-            <div class="main-left row d-flex align-items-center">                
-                    <div class="col-12 d-flex justify-content-center">
-                        <a href="/home">
-                            <button class="rounded-circle button-span d-none d-sm-block"><i class="fa fa-caret-up fa-2x" aria-hidden="true"></i><div class="button-text">Home</div></button>
-                        </a>
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
-                        <a href="/gallery">
-                            <button class="rounded-circle button-span d-none d-sm-block"><div class="button-text-down">Gallery</div><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></button>
-                        </a>
-                    </div>                
+            <div class="main-left row d-flex align-items-center">
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="/home">
+                        <button class="rounded-circle button-span d-none d-sm-block"><i class="fa fa-caret-up fa-2x"
+                                aria-hidden="true"></i>
+                            <div class="button-text">Home</div>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="/gallery">
+                        <button class="rounded-circle button-span d-none d-sm-block">
+                            <div class="button-text-down">Gallery</div><i class="fa fa-caret-down fa-2x"
+                                aria-hidden="true"></i>
+                        </button>
+                    </a>
+                </div>
             </div>
             <div class="main-mid">
                 <div class="lift-top"></div>
@@ -55,7 +65,7 @@
 
                     <div class="lift-mid-right"></div>
                 </div>
-                
+
                 <div class="lift-bottom"></div>
 
                 <div *ngIf="inaktifLift === false" class="row lift">
@@ -65,16 +75,22 @@
             </div>
 
             <div class="main-right row d-flex align-items-center">
-                    <div class="col-12 d-flex justify-content-center">
-                        <a href="/ueber-uns">
-                            <button class="rounded-circle button-span d-none d-sm-block"><i class="fa fa-caret-up fa-2x" aria-hidden="true"></i><div class="button-text">Über Uns</div></button>
-                        </a>
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
-                        <a href="/kontakt">
-                            <button class="rounded-circle button-span d-none d-sm-block"><div class="button-text-down">Kontakt</div><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></button>
-                        </a>
-                    </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="/ueber-uns">
+                        <button class="rounded-circle button-span d-none d-sm-block"><i class="fa fa-caret-up fa-2x"
+                                aria-hidden="true"></i>
+                            <div class="button-text">Über Uns</div>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="/kontakt">
+                        <button class="rounded-circle button-span d-none d-sm-block">
+                            <div class="button-text-down">Kontakt</div><i class="fa fa-caret-down fa-2x"
+                                aria-hidden="true"></i>
+                        </button>
+                    </a>
+                </div>
             </div>
         </main>
 
